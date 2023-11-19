@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://kmvvequph74a"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_7eb3l"]
+[ext_resource type="Texture2D" uid="uid://b5ndxwtyfurop" path="res://assets/ballBlue_10.png" id="2_wgbgq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pvju5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ofrh"]
+radius = 9.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_offl5"]
+size = Vector2(64, 16)
+
+[node name="Main" type="Node2D"]
+
+[node name="Ball" type="RigidBody2D" parent="."]
+position = Vector2(249, 464)
+physics_material_override = SubResource("PhysicsMaterial_pvju5")
+gravity_scale = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+scale = Vector2(0.121622, 0.121622)
+texture = ExtResource("2_wgbgq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_8ofrh")
+
+[node name="Player" type="StaticBody2D" parent="."]
+position = Vector2(240, 592)
+script = ExtResource("1_7eb3l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_offl5")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+offset_left = -32.0
+offset_top = -8.0
+offset_right = 33.0
+offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
