@@ -1,19 +1,31 @@
 [gd_scene load_steps=7 format=3 uid="uid://kmvvequph74a"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_7eb3l"]
-[ext_resource type="Script" path="res://Ball.gd" id="2_elun0"]
+[ext_resource type="Script" path="res://Ball.gd" id="1_shta5"]
 [ext_resource type="Texture2D" uid="uid://b5ndxwtyfurop" path="res://assets/ballBlue_10.png" id="2_wgbgq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_offl5"]
-size = Vector2(64, 16)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dpo6s"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pvju5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8ofrh"]
 radius = 9.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_offl5"]
+size = Vector2(64, 16)
+
 [node name="Main" type="Node2D"]
-position = Vector2(0, 8)
+
+[node name="Ball" type="RigidBody2D" parent="."]
+position = Vector2(240, 464)
+physics_material_override = SubResource("PhysicsMaterial_pvju5")
+gravity_scale = 0.0
+script = ExtResource("1_shta5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+scale = Vector2(0.121622, 0.121622)
+texture = ExtResource("2_wgbgq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_8ofrh")
 
 [node name="Player" type="StaticBody2D" parent="."]
 position = Vector2(240, 592)
@@ -28,16 +40,3 @@ offset_top = -8.0
 offset_right = 33.0
 offset_bottom = 8.0
 metadata/_edit_use_anchors_ = true
-
-[node name="Ball" type="RigidBody2D" parent="."]
-position = Vector2(240, 288)
-physics_material_override = SubResource("PhysicsMaterial_dpo6s")
-gravity_scale = 0.0
-script = ExtResource("2_elun0")
-
-[node name="Sprite2D" type="Sprite2D" parent="Ball"]
-scale = Vector2(0.121622, 0.121622)
-texture = ExtResource("2_wgbgq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
-shape = SubResource("CircleShape2D_8ofrh")
