@@ -1,8 +1,10 @@
 extends StaticBody2D
 
+# How fast the player will move (pixels/sec)
+@export var speed = 400 
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
-var screen_size # Size of the game window.
+# Size of the game window
+var screen_size 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,6 +22,6 @@ func _process(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 
-	# limit movement to the view screen... ish
+	# limit movement to the view screen... ish. Bit hacky
 	position += velocity * delta
 	position.x = clamp(position.x, 40, screen_size.x - 40)
