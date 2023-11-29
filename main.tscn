@@ -90,134 +90,244 @@ shape = SubResource("RectangleShape2D_eb52v")
 [node name="Blocks" type="Node" parent="."]
 
 [node name="Block" type="StaticBody2D" parent="Blocks"]
-position = Vector2(0, 8)
+position = Vector2(-8, 114)
 script = ExtResource("4_6c04b")
 
 [node name="ColorRect" type="ColorRect" parent="Blocks/Block"]
-offset_left = 216.0
-offset_top = 232.0
-offset_right = 256.0
-offset_bottom = 248.0
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block"]
-position = Vector2(236, 240)
+position = Vector2(234, 132)
 shape = SubResource("RectangleShape2D_v062e")
 
 [node name="Area2D" type="Area2D" parent="Blocks/Block"]
-position = Vector2(231, 242)
+position = Vector2(229, 134)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block/Area2D"]
 position = Vector2(5, -2)
 shape = SubResource("RectangleShape2D_0v1r5")
 
 [node name="Block2" type="StaticBody2D" parent="Blocks"]
-position = Vector2(-1, -28)
+position = Vector2(56, 114)
 script = ExtResource("4_6c04b")
 
 [node name="ColorRect" type="ColorRect" parent="Blocks/Block2"]
-offset_left = 216.0
-offset_top = 232.0
-offset_right = 256.0
-offset_bottom = 248.0
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block2"]
-position = Vector2(236, 240)
+position = Vector2(234, 132)
 shape = SubResource("RectangleShape2D_v062e")
 
 [node name="Area2D" type="Area2D" parent="Blocks/Block2"]
-position = Vector2(231, 242)
+position = Vector2(229, 134)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block2/Area2D"]
 position = Vector2(5, -2)
 shape = SubResource("RectangleShape2D_0v1r5")
 
 [node name="Block3" type="StaticBody2D" parent="Blocks"]
-position = Vector2(-21, -10)
+position = Vector2(-72, 114)
 script = ExtResource("4_6c04b")
 
 [node name="ColorRect" type="ColorRect" parent="Blocks/Block3"]
-offset_left = 216.0
-offset_top = 232.0
-offset_right = 256.0
-offset_bottom = 248.0
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block3"]
-position = Vector2(236, 240)
+position = Vector2(234, 132)
 shape = SubResource("RectangleShape2D_v062e")
 
 [node name="Area2D" type="Area2D" parent="Blocks/Block3"]
-position = Vector2(231, 242)
+position = Vector2(229, 134)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block3/Area2D"]
 position = Vector2(5, -2)
 shape = SubResource("RectangleShape2D_0v1r5")
 
 [node name="Block4" type="StaticBody2D" parent="Blocks"]
-position = Vector2(22, -10)
+position = Vector2(120, 114)
 script = ExtResource("4_6c04b")
 
 [node name="ColorRect" type="ColorRect" parent="Blocks/Block4"]
-offset_left = 216.0
-offset_top = 232.0
-offset_right = 256.0
-offset_bottom = 248.0
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block4"]
-position = Vector2(236, 240)
+position = Vector2(234, 132)
 shape = SubResource("RectangleShape2D_v062e")
 
 [node name="Area2D" type="Area2D" parent="Blocks/Block4"]
-position = Vector2(231, 242)
+position = Vector2(229, 134)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block4/Area2D"]
 position = Vector2(5, -2)
 shape = SubResource("RectangleShape2D_0v1r5")
 
 [node name="Block5" type="StaticBody2D" parent="Blocks"]
-position = Vector2(42, -28)
+position = Vector2(-40, 80)
 script = ExtResource("4_6c04b")
 
 [node name="ColorRect" type="ColorRect" parent="Blocks/Block5"]
-offset_left = 216.0
-offset_top = 232.0
-offset_right = 256.0
-offset_bottom = 248.0
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block5"]
-position = Vector2(236, 240)
+position = Vector2(234, 132)
 shape = SubResource("RectangleShape2D_v062e")
 
 [node name="Area2D" type="Area2D" parent="Blocks/Block5"]
-position = Vector2(231, 242)
+position = Vector2(229, 134)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block5/Area2D"]
 position = Vector2(5, -2)
 shape = SubResource("RectangleShape2D_0v1r5")
 
 [node name="Block6" type="StaticBody2D" parent="Blocks"]
-position = Vector2(-44, -28)
+position = Vector2(24, 80)
 script = ExtResource("4_6c04b")
 
 [node name="ColorRect" type="ColorRect" parent="Blocks/Block6"]
-offset_left = 216.0
-offset_top = 232.0
-offset_right = 256.0
-offset_bottom = 248.0
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block6"]
-position = Vector2(236, 240)
+position = Vector2(234, 132)
 shape = SubResource("RectangleShape2D_v062e")
 
 [node name="Area2D" type="Area2D" parent="Blocks/Block6"]
-position = Vector2(231, 242)
+position = Vector2(229, 134)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block6/Area2D"]
+position = Vector2(5, -2)
+shape = SubResource("RectangleShape2D_0v1r5")
+
+[node name="Block7" type="StaticBody2D" parent="Blocks"]
+position = Vector2(88, 80)
+script = ExtResource("4_6c04b")
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block7"]
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block7"]
+position = Vector2(234, 132)
+shape = SubResource("RectangleShape2D_v062e")
+
+[node name="Area2D" type="Area2D" parent="Blocks/Block7"]
+position = Vector2(229, 134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block7/Area2D"]
+position = Vector2(5, -2)
+shape = SubResource("RectangleShape2D_0v1r5")
+
+[node name="Block8" type="StaticBody2D" parent="Blocks"]
+position = Vector2(-72, 48)
+script = ExtResource("4_6c04b")
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block8"]
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block8"]
+position = Vector2(234, 132)
+shape = SubResource("RectangleShape2D_v062e")
+
+[node name="Area2D" type="Area2D" parent="Blocks/Block8"]
+position = Vector2(229, 134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block8/Area2D"]
+position = Vector2(5, -2)
+shape = SubResource("RectangleShape2D_0v1r5")
+
+[node name="Block9" type="StaticBody2D" parent="Blocks"]
+position = Vector2(-8, 48)
+script = ExtResource("4_6c04b")
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block9"]
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block9"]
+position = Vector2(234, 132)
+shape = SubResource("RectangleShape2D_v062e")
+
+[node name="Area2D" type="Area2D" parent="Blocks/Block9"]
+position = Vector2(229, 134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block9/Area2D"]
+position = Vector2(5, -2)
+shape = SubResource("RectangleShape2D_0v1r5")
+
+[node name="Block10" type="StaticBody2D" parent="Blocks"]
+position = Vector2(56, 48)
+script = ExtResource("4_6c04b")
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block10"]
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block10"]
+position = Vector2(234, 132)
+shape = SubResource("RectangleShape2D_v062e")
+
+[node name="Area2D" type="Area2D" parent="Blocks/Block10"]
+position = Vector2(229, 134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block10/Area2D"]
+position = Vector2(5, -2)
+shape = SubResource("RectangleShape2D_0v1r5")
+
+[node name="Block11" type="StaticBody2D" parent="Blocks"]
+position = Vector2(120, 48)
+script = ExtResource("4_6c04b")
+
+[node name="ColorRect" type="ColorRect" parent="Blocks/Block11"]
+offset_left = 214.0
+offset_top = 124.0
+offset_right = 254.0
+offset_bottom = 140.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block11"]
+position = Vector2(234, 132)
+shape = SubResource("RectangleShape2D_v062e")
+
+[node name="Area2D" type="Area2D" parent="Blocks/Block11"]
+position = Vector2(229, 134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocks/Block11/Area2D"]
 position = Vector2(5, -2)
 shape = SubResource("RectangleShape2D_0v1r5")
 
@@ -227,3 +337,8 @@ shape = SubResource("RectangleShape2D_0v1r5")
 [connection signal="body_exited" from="Blocks/Block4/Area2D" to="Blocks/Block4" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Blocks/Block5/Area2D" to="Blocks/Block5" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Blocks/Block6/Area2D" to="Blocks/Block6" method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="Blocks/Block7/Area2D" to="Blocks/Block7" method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="Blocks/Block8/Area2D" to="Blocks/Block8" method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="Blocks/Block9/Area2D" to="Blocks/Block9" method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="Blocks/Block10/Area2D" to="Blocks/Block10" method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="Blocks/Block11/Area2D" to="Blocks/Block11" method="_on_area_2d_body_exited"]
