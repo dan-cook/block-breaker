@@ -336,15 +336,15 @@ shape = SubResource("RectangleShape2D_0v1r5")
 script = ExtResource("5_c2ubk")
 
 [node name="Score" type="Label" parent="HUD"]
-offset_left = 270.0
-offset_top = 16.0
-offset_right = 480.0
-offset_bottom = 42.0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 464.0
+offset_bottom = 72.0
 theme_override_font_sizes/font_size = 32
 text = "0"
 horizontal_alignment = 2
+vertical_alignment = 1
 
-[connection signal="score_updated" from="Player" to="HUD" method="_on_player_score_updated"]
 [connection signal="body_exited" from="Blocks/Block/Area2D" to="Blocks/Block" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Blocks/Block2/Area2D" to="Blocks/Block2" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Blocks/Block3/Area2D" to="Blocks/Block3" method="_on_area_2d_body_exited"]
