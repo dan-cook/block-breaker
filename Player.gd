@@ -10,6 +10,7 @@ var screen_size
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	hide()
 	screen_size = get_viewport_rect().size
 	Signalbus.connect(Signalbus.block_hit.get_name(), _on_block_hit)
 
@@ -34,3 +35,7 @@ func _process(delta):
 func _on_block_hit():
 	Globals.score += 1
 	score_updated.emit()
+
+
+func _on_hud_start_game():
+	show()

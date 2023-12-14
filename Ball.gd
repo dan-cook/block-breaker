@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 @export var speed = 450
+var enabled = false
 
 # x/y coordinates for the direction the ball is heading
 # NORTH: 0,-1
@@ -11,11 +12,13 @@ var direction = Vector2(0,1)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if !enabled:
+		return
+		
 	var velocity = speed * direction * delta
 	position += velocity * delta
 	
@@ -27,3 +30,7 @@ func _physics_process(delta):
 		
 		#need to normalise otherwise you carry forward additional velocity
 		direction = collision.get_remainder().bounce(collision.get_normal()).normalized()
+
+
+func _on_hud_start_game():
+	enabled = true

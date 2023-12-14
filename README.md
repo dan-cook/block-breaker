@@ -8,7 +8,7 @@ This is a simple demo of a breakout style game written in Godot 4. Although I fo
 - [x] Ball physics
 - [x] Breakable blocks
 - [x] Basic UI scoring
-- [ ] Start button
+- [x] Start button
 - [ ] Pause/resume gameplay
 - [ ] Player lives
 - [ ] Game Over / Retry
@@ -22,3 +22,4 @@ This is a simple demo of a breakout style game written in Godot 4. Although I fo
  - Block placement (level design) in-code rather than placed by hand
  - Endless mode where levels are randomly generated with increased difficulty
  - Powerups or other temporary player abilities
+ - Mouse movement

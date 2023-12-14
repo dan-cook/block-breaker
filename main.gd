@@ -11,3 +11,6 @@ func _process(delta) -> void:
 
 func new_game() -> void:
 	pass
+
+
+# 	get_tree().paused = true

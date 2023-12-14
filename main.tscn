@@ -1,10 +1,27 @@
-[gd_scene load_steps=13 format=3 uid="uid://brnmq4um0bj83"]
+[gd_scene load_steps=14 format=3 uid="uid://brnmq4um0bj83"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_7eb3l"]
 [ext_resource type="Script" path="res://Ball.gd" id="2_elun0"]
 [ext_resource type="Texture2D" uid="uid://b5ndxwtyfurop" path="res://assets/ballBlue_10.png" id="2_wgbgq"]
 [ext_resource type="Script" path="res://Block.gd" id="4_6c04b"]
 [ext_resource type="Script" path="res://HUD.gd" id="5_c2ubk"]
+
+[sub_resource type="GDScript" id="GDScript_6decb"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _on_hud_start_game():
+	show()
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_offl5"]
 size = Vector2(64, 16)
@@ -15,7 +32,7 @@ size = Vector2(64, 16)
 radius = 9.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13m7r"]
-size = Vector2(496, 8)
+size = Vector2(480, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eb52v"]
 size = Vector2(720, 8)
@@ -28,6 +45,7 @@ size = Vector2(42, 18)
 
 [node name="Main" type="Node2D"]
 position = Vector2(0, 8)
+script = SubResource("GDScript_6decb")
 
 [node name="Player" type="StaticBody2D" parent="."]
 position = Vector2(240, 592)
@@ -344,6 +362,14 @@ theme_override_font_sizes/font_size = 32
 text = "0"
 horizontal_alignment = 2
 
+[node name="Start" type="Button" parent="HUD"]
+anchors_preset = -1
+offset_left = 200.0
+offset_top = 584.0
+offset_right = 278.0
+offset_bottom = 615.0
+text = "Start"
+
 [connection signal="score_updated" from="Player" to="HUD" method="_on_player_score_updated"]
 [connection signal="body_exited" from="Blocks/Block/Area2D" to="Blocks/Block" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Blocks/Block2/Area2D" to="Blocks/Block2" method="_on_area_2d_body_exited"]
@@ -356,3 +382,6 @@ horizontal_alignment = 2
 [connection signal="body_exited" from="Blocks/Block9/Area2D" to="Blocks/Block9" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Blocks/Block10/Area2D" to="Blocks/Block10" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Blocks/Block11/Area2D" to="Blocks/Block11" method="_on_area_2d_body_exited"]
+[connection signal="start_game" from="HUD" to="Player" method="_on_hud_start_game"]
+[connection signal="start_game" from="HUD" to="Ball" method="_on_hud_start_game"]
+[connection signal="pressed" from="HUD/Start" to="HUD" method="_on_start_pressed"]
