@@ -2,6 +2,7 @@ extends RigidBody2D
 
 @export var speed = 450
 var enabled = false
+signal ball_out_of_bounds
 
 # x/y coordinates for the direction the ball is heading
 # NORTH: 0,-1
@@ -22,6 +23,9 @@ func _physics_process(delta):
 	var velocity = speed * direction * delta
 	position += velocity * delta
 	
+	if position.y > get_viewport().size.y:
+		ball_out_of_bounds.emit()
+		
 	# check for collision, if so we need to calculate a new direction
 	# https://docs.godotengine.org/en/stable/tutorials/math/vector_math.html#doc-vector-math
 	var collision = move_and_collide(velocity)

@@ -1,5 +1,8 @@
 extends Node2D
 
+
+signal game_over_triggered
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -7,10 +10,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) -> void:
-	print('1')
+	pass
 
 func new_game() -> void:
 	pass
 
+# 
+func game_over() -> void:
+	get_tree().reload_current_scene()
+	game_over_triggered.emit()
 
-# 	get_tree().paused = true
+
+func _on_ball_ball_out_of_bounds():
+	game_over()

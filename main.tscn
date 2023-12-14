@@ -1,27 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://brnmq4um0bj83"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_7eb3l"]
+[ext_resource type="Script" path="res://main.gd" id="1_t1mhw"]
 [ext_resource type="Script" path="res://Ball.gd" id="2_elun0"]
 [ext_resource type="Texture2D" uid="uid://b5ndxwtyfurop" path="res://assets/ballBlue_10.png" id="2_wgbgq"]
 [ext_resource type="Script" path="res://Block.gd" id="4_6c04b"]
 [ext_resource type="Script" path="res://HUD.gd" id="5_c2ubk"]
-
-[sub_resource type="GDScript" id="GDScript_6decb"]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func _on_hud_start_game():
-	show()
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_offl5"]
 size = Vector2(64, 16)
@@ -45,7 +29,7 @@ size = Vector2(42, 18)
 
 [node name="Main" type="Node2D"]
 position = Vector2(0, 8)
-script = SubResource("GDScript_6decb")
+script = ExtResource("1_t1mhw")
 
 [node name="Player" type="StaticBody2D" parent="."]
 position = Vector2(240, 592)
@@ -81,13 +65,6 @@ position = Vector2(240, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall"]
 position = Vector2(0, -12)
-shape = SubResource("RectangleShape2D_13m7r")
-
-[node name="Wall2" type="StaticBody2D" parent="Walls"]
-position = Vector2(240, 904)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2"]
-position = Vector2(0, -180)
 shape = SubResource("RectangleShape2D_13m7r")
 
 [node name="Wall3" type="StaticBody2D" parent="Walls"]
@@ -377,6 +354,7 @@ offset_bottom = 706.0
 text = "Press 'P' to pause"
 
 [connection signal="score_updated" from="Player" to="HUD" method="_on_player_score_updated"]
+[connection signal="ball_out_of_bounds" from="Ball" to="." method="_on_ball_ball_out_of_bounds"]
 [connection signal="body_exited" from="Blocks/Block/Area2D" to="Blocks/Block" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Blocks/Block2/Area2D" to="Blocks/Block2" method="_on_area_2d_body_exited"]
 [connection signal="body_exited" from="Blocks/Block3/Area2D" to="Blocks/Block3" method="_on_area_2d_body_exited"]
