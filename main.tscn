@@ -363,12 +363,18 @@ text = "0"
 horizontal_alignment = 2
 
 [node name="Start" type="Button" parent="HUD"]
-anchors_preset = -1
 offset_left = 200.0
 offset_top = 584.0
 offset_right = 278.0
 offset_bottom = 615.0
 text = "Start"
+
+[node name="Pause" type="Label" parent="HUD"]
+offset_left = 182.0
+offset_top = 680.0
+offset_right = 317.0
+offset_bottom = 706.0
+text = "Press 'P' to pause"
 
 [connection signal="score_updated" from="Player" to="HUD" method="_on_player_score_updated"]
 [connection signal="body_exited" from="Blocks/Block/Area2D" to="Blocks/Block" method="_on_area_2d_body_exited"]

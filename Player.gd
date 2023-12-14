@@ -23,6 +23,7 @@ func _process(delta):
 	if Input.is_action_pressed("left"):
 		velocity.x -= 1
 
+
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 
