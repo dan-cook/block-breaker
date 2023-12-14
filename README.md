@@ -11,7 +11,7 @@ This is a simple demo of a breakout style game written in Godot 4. Although I fo
 - [x] Start button
 - [x] Pause/resume gameplay
 - [ ] Player lives
-- [ ] Game Over / Retry
+- [x] Game Over / Retry
 - [ ] Background music & gameplay sounds
 
 
