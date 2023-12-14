@@ -7,7 +7,7 @@ This is a simple demo of a breakout style game written in Godot 4. Although I fo
 
 - [x] Ball physics
 - [x] Breakable blocks
-- [ ] Basic UI scoring
+- [x] Basic UI scoring
 - [ ] Start button
 - [ ] Pause/resume gameplay
 - [ ] Player lives
