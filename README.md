@@ -1,4 +1,4 @@
-# Block Breaker Demo
+# [WIP] Block Breaker Demo
 
 This is a simple demo of a breakout style game written in Godot 4. Although I found many basic tutorials online, I could not find an up to date one nor one that went for a simple approach. This code is not pretty, nor is it organised but then there isn't really much to organise, comments will also tell you what everything's doing.
 
@@ -17,6 +17,7 @@ This is a simple demo of a breakout style game written in Godot 4. Although I fo
 
 ## Improvements / future ideas to expand on:
  - Multiple levels
+ - Code-generative level design
  - Save state (progress, high score)
  - Varied blocks (more health, different shapes, etc)
  - Block placement (level design) in-code rather than placed by hand
