@@ -13,6 +13,7 @@ This is a simple demo of a breakout style game written in Godot 4. Although I fo
 - [ ] Player lives
 - [x] Game Over / Retry
 - [ ] Background music & gameplay sounds
+- [ ] Bug free
 
 
 ## Improvements / future ideas to expand on:
@@ -20,7 +21,6 @@ This is a simple demo of a breakout style game written in Godot 4. Although I fo
  - Code-generative level design
  - Save state (progress, high score)
  - Varied blocks (more health, different shapes, etc)
- - Block placement (level design) in-code rather than placed by hand
  - Endless mode where levels are randomly generated with increased difficulty
  - Powerups or other temporary player abilities
  - Mouse movement
